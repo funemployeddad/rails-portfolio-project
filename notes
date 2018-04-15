@@ -1,0 +1,34 @@
+User
+  :user{:username, :email, :password}
+
+  registration
+  - creates new Users
+
+------------------
+Session
+  login
+  - need a Sessions Controller, but no model
+  --> our server log in works
+
+  logout - route '/logout' sessions#destroy session.delete
+
+  OAuth
+    once you can make your users and have them, and only them access their account, go back and add the APIs to use other services
+
+------------------
+Items
+  :item{:description, :price}
+    -- item[:available]  is a future expansion for inventory mgmt.
+
+Cart
+belongs_to :user
+has_many :items
+
+------------------
+Orders == A cart becomes an order (the act of which destroys the cart in the session - can be recreated by a user initiating a new purchase)
+belongs_to :user
+has_many :items
+
+
+Asset Pipeline
+-Bootstrap?
