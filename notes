@@ -1,7 +1,8 @@
 User
-  :user{:username, :email, :password}
+ :user{:username, :email, :password}   DONE
 
   registration
+  /users/new     users#create    new_user_path
   - creates new Users
 
 ------------------
