@@ -7,8 +7,8 @@ User
 
 ------------------
 Items
-  :item{:description, :price}
-    -- item[:available]  is a future expansion for inventory mgmt.
+  :item{:description}
+    -- item[:available, :price]  is a future expansion for inventory mgmt.
 
 Cart
   belongs_to :user
